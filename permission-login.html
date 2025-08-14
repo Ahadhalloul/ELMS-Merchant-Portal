@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejada Portfolio Management</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="main-container login">
+      <!-- login form  -->
+      <div class="login-container">
+        <div class="logo">
+          <img src="assets/images/logo.svg" alt="" />
+        </div>
+        <h4>Welcome to Ejada Loyalty Management System</h4>
+        <p>Log in to continue to your account</p>
+        <!-- permissions msg  -->
+        <div class="permissions-msg-box">
+          <div class="error-msg-box">
+            You do not have the necessary permissions to proceed.
+          </div>
+          <p>Please contact <a href="#">contact us</a> to resolve the issue.</p>
+        </div>
+        <!-- -----------------  -->
+        <!-- add permission class for permission error -->
+        <div class="form-container permission-error">
+          <div class="form-content">
+            <div class="inputs-container">
+              <div>
+                <label class="flex-row gap-4" for=""
+                  >Username<span class="required-star">*</span>
+                  <img src="assets/icons/info-circle-filled.svg" alt="" />
+                </label>
+                <div class="form-input flex-row">
+                  <input
+                    id="email"
+                    type="text"
+                    placeholder="Enter Your Email"
+                    value="hmadsamer321email.com"
+                  />
+                </div>
+              </div>
+              <div>
+                <label for=""
+                  >Password<span class="required-star">*</span>
+                </label>
+                <div class="form-input flex-row">
+                  <input
+                    type="password"
+                    placeholder="Enter Your Password"
+                    id="password"
+                    value="123456789"
+                  />
+                  <img
+                    id="hide-password-icon"
+                    class="hide-password"
+                    src="assets/icons/eye.svg"
+                    alt=""
+                    onclick="togglePassword()"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-end flex-row">
+              <div class="flex-row"></div>
+              <a href="forgot.html">Forgot Password?</a>
+            </div>
+            <button onclick="validateInput()" class="login-btn">Login</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- background shape -->
+      <div class="login-shape-left">
+        <img src="assets/images/login-shape-left.png" alt="" />
+      </div>
+      <div class="login-shape-right">
+        <img src="assets/images/login-shape-right.png" alt="" />
+      </div>
+    </main>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

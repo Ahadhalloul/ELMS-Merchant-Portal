@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejada Portfolio Management Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- ---Start sidebar menu --- -->
+      <div class="sidebar-container" id="sidebar-container">
+        <!-- menu collapse icon -->
+        <div class="collapse-icon" onclick="collapseSidebar()">
+          <img src="assets/icons/Collapse Nav bar.svg" alt="" />
+        </div>
+        <div class="logo">
+          <img
+            class="large"
+            src="assets/images/logo-white.svg"
+            alt="ejada logo"
+          />
+          <img class="small" src="assets/images/collapsed-logo.png" alt="" />
+        </div>
+        <img class="line" src="assets/icons/Vector 6.svg" alt="" />
+        <!-----  Side nav ----->
+        <ul class="nav-list">
+          <li>
+            <a class="flex-row">
+              <div class="flex-row">
+                <img src="assets/icons/home 4.png" alt="" />
+                <p>Home</p>
+              </div>
+              <img class="arrow" src="assets/icons/Vector.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a class="flex-row">
+              <div class="flex-row">
+                <img src="assets/icons/user-circle 1.png" alt="" />
+                <p>Merchant Profile</p>
+              </div>
+              <img class="arrow" src="assets/icons/Vector.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a class="flex-row">
+              <div class="flex-row">
+                <img src="assets/icons/users-group 1.png" alt="" />
+                <p>Merchant Users</p>
+              </div>
+              <img class="arrow" src="assets/icons/Vector.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a class="flex-row">
+              <div class="flex-row">
+                <img src="assets/icons/Vector3.png" alt="" />
+                <p>Product Management</p>
+              </div>
+              <img class="arrow" src="assets/icons/Vector.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a class="flex-row">
+              <div class="flex-row">
+                <img src="assets/icons/coins 1.svg" alt="" />
+                <p>Points Management</p>
+              </div>
+              <img class="arrow" src="assets/icons/Vector.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a class="flex-row active">
+              <div class="flex-row">
+                <img src="assets/icons/report 2.svg" alt="" />
+                <p>Reports</p>
+              </div>
+              <img class="arrow" src="assets/icons/Vector.svg" alt="" />
+            </a>
+            <ul class="sub-menu">
+              <li><a>Transactions Report</a></li>
+              <li><a>Billing Report</a></li>
+              <li><a class="active">Points Report</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ---End side bar menu --- -->
+      <!-- ---- ---start dashboard header&content--- -->
+      <div class="main-container dashboard">
+        <!-- Start header  -->
+        <header class="header">
+          <div></div>
+          <div class="user-nav">
+            <div class="user-name flex-row">
+              <img
+                class="user-img"
+                src="assets/images/Ellipse 10.png"
+                alt="user image"
+              />
+              <h4>Nadine Hafez</h4>
+              <img src="assets/icons/Shape.svg" alt="" />
+            </div>
+            <div class="notification">
+              <img src="assets/icons/bell.svg" alt="" />
+            </div>
+            <img src="assets/icons/Line 57.svg" alt="" />
+            <div class="language flex-row">
+              <img src="assets/icons/world.svg" alt="" />
+              <p>English</p>
+              <img src="assets/icons/Shape.svg" alt="" />
+            </div>
+          </div>
+        </header>
+        <!-- End header  -->
+        <!-- Start dashboard content -->
+        <div class="dashboard-content">
+          <div class="table-container">
+            <div class="table-header flex-row space-between gap-8">
+              <div class="flex-row gap-8">
+                <img src="assets/icons/design-layout.svg" alt="" />
+                <img src="assets/icons/Line 572.svg" alt="" />
+                <img src="assets/icons/database.svg" alt="" />
+              </div>
+              <div class="drop-down-input">
+                Column Customize
+                <img src="assets/icons/chevron-down-White.svg" alt="" />
+              </div>
+            </div>
+            <div class="products-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <div>
+                        Product Code
+                        <img
+                          src="assets/icons/swap_vert_FILL0_wght300_GRAD0_opsz24 1.svg"
+                          alt=""
+                        />
+                      </div>
+                    </th>
+                    <th>Product Image</th>
+                    <th>
+                      <div>
+                        Product Name (En)<img
+                          src="assets/icons/swap_vert_FILL0_wght300_GRAD0_opsz24 1.svg"
+                          alt=""
+                        />
+                      </div>
+                    </th>
+
+                    <th>
+                      <div>
+                        Product Name (Ar)<img
+                          src="assets/icons/swap_vert_FILL0_wght300_GRAD0_opsz24 1.svg"
+                          alt=""
+                        />
+                      </div>
+                    </th>
+
+                    <th>
+                      <div>
+                        Product Status
+                        <img
+                          src="assets/icons/swap_vert_FILL0_wght300_GRAD0_opsz24 1.svg"
+                          alt=""
+                        />
+                      </div>
+                    </th>
+
+                    <th></th>
+                    <!-- Empty header for options column -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="code">256314891</td>
+                    <td>
+                      <div class="table-img">
+                        <img src="assets/images/product-img-1.png" alt="" />
+                      </div>
+                    </td>
+                    <td>Platinum Credit Card</td>
+                    <td>بطاقة الائتمان البلاتينية</td>
+                    <td>
+                      <div class="status-inactive">Inactive</div>
+                    </td>
+                    <td class="options-column">
+                      <img
+                        onclick="showOptions()"
+                        src="../assets/icons/three-dot.svg"
+                        alt=""
+                      />
+                      <!-- options box -->
+                      <ul class="options-list hide">
+                        <li>Edit</li>
+                        <li>Deactivate</li>
+                        <li>Add extra event</li>
+                      </ul>
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+
+                  <tr>
+                    <td class="code">256314892</td>
+                    <td>
+                      <div class="table-img">
+                        <img src="assets/images/product-img-2.png" alt="" />
+                      </div>
+                    </td>
+                    <td>Credit Card</td>
+                    <td>بطاقة الائتمان</td>
+                    <td>
+                      <div class="status-active">Active</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+                  <tr>
+                    <td class="code">256314891</td>
+                    <td>
+                      <div class="table-img">
+                        <img src="assets/images/product-img-1.png" alt="" />
+                      </div>
+                    </td>
+                    <td>Platinum Credit Card</td>
+                    <td>بطاقة الائتمان البلاتينية</td>
+                    <td>
+                      <div class="status-inactive">Inactive</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+
+                  <tr>
+                    <td class="code">256314892</td>
+                    <td>
+                      <div class="table-img">
+                        <img src="assets/images/product-img-2.png" alt="" />
+                      </div>
+                    </td>
+                    <td>Credit Card</td>
+                    <td>بطاقة الائتمان</td>
+                    <td>
+                      <div class="status-active">Active</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+                  <tr>
+                    <td class="code">256314891</td>
+                    <td>
+                      <div class="table-img">
+                        <img src="assets/images/product-img-1.png" alt="" />
+                      </div>
+                    </td>
+                    <td>Platinum Credit Card</td>
+                    <td>بطاقة الائتمان البلاتينية</td>
+                    <td>
+                      <div class="status-inactive">Inactive</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+
+                  <tr>
+                    <td class="code">256314892</td>
+                    <td>
+                      <div class="table-img">
+                        <img src="assets/images/product-img-2.png" alt="" />
+                      </div>
+                    </td>
+                    <td>Credit Card</td>
+                    <td>بطاقة الائتمان</td>
+                    <td>
+                      <div class="status-active">Active</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+                  <tr>
+                    <td class="code">256314891</td>
+                    <td>
+                      <div class="table-img">
+                        <img src="assets/images/product-img-1.png" alt="" />
+                      </div>
+                    </td>
+                    <td>Platinum Credit Card</td>
+                    <td>بطاقة الائتمان البلاتينية</td>
+                    <td>
+                      <div class="status-inactive">Inactive</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+
+                  <tr>
+                    <td class="code">256314892</td>
+                    <td>
+                      <div class="table-img">
+                        <img src="assets/images/product-img-2.png" alt="" />
+                      </div>
+                    </td>
+                    <td>Credit Card</td>
+                    <td>بطاقة الائتمان</td>
+                    <td>
+                      <div class="status-active">Active</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+                  <tr>
+                    <td class="code">256314891</td>
+                    <td>
+                      <div class="table-img">
+                        <img src="assets/images/product-img-1.png" alt="" />
+                      </div>
+                    </td>
+                    <td>Platinum Credit Card</td>
+                    <td>بطاقة الائتمان البلاتينية</td>
+                    <td>
+                      <div class="status-inactive">Inactive</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+
+                  <tr>
+                    <td class="code">256314892</td>
+                    <td>
+                      <div class="table-img">
+                        <img src="assets/images/product-img-2.png" alt="" />
+                      </div>
+                    </td>
+                    <td>Credit Card</td>
+                    <td>بطاقة الائتمان</td>
+                    <td>
+                      <div class="status-active">Active</div>
+                    </td>
+                    <td class="options-column">
+                      <img src="../assets/icons/three-dot.svg" alt="" />
+                    </td>
+                    <!-- Options column -->
+                  </tr>
+                  <!-- Add more rows as needed -->
+                </tbody>
+              </table>
+            </div>
+            <!------ table footer  ------>
+            <div class="table-footer flex-row">
+              <div class="flex-row">
+                <span>Display</span>
+                <div class="display-count">
+                  <span>10</span>
+                  <div>
+                    <img src="../assets/icons/Line 2.svg" alt="" />
+                    <img src="../assets/icons/Vector2.svg" alt="" />
+                  </div>
+                </div>
+                <span>10</span> results out of <span>50</span>
+              </div>
+
+              <div class="flex-row pagination-arrows">
+                <div class="">page <span>1</span> of <span>5</span></div>
+                <ul class="pagination-pages">
+                  <li>
+                    <a href="#" class="prev disabled">
+                      <img src="../assets/icons/Component 1.svg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="prev disabled">
+                      <img src="../assets/icons/arr-prev.svg" alt="" />
+                    </a>
+                  </li>
+                  <li><a href="#" class="page active">1</a></li>
+                  <li><a href="#" class="page">2</a></li>
+                  <li><a href="#" class="page">3</a></li>
+                  <li><a href="#" class="page">...</a></li>
+                  <li><a href="#" class="page">20</a></li>
+                  <li>
+                    <a href="#" class="prev">
+                      <img src="../assets/icons/arr-next.svg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="prev">
+                      <img src="../assets/icons/Component 2.svg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End dashboard content -->
+      </div>
+      <!-- -------------- ---End  dashboard --- -->
+    </div>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejada Portfolio Management Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- ---Start sidebar menu --- -->
+      <div class="sidebar-container" id="sidebar-container">
+        <!-- menu collapse icon -->
+        <div class="collapse-icon" onclick="collapseSidebar()">
+          <img src="assets/icons/Collapse Nav bar.svg" alt="" />
+        </div>
+        <div class="logo">
+          <img
+            class="large"
+            src="assets/images/logo-white.svg"
+            alt="ejada logo"
+          />
+          <img class="small" src="assets/images/collapsed-logo.png" alt="" />
+        </div>
+        <img class="line" src="assets/icons/Vector 6.svg" alt="" />
+        <!-----  Side nav ----->
+        <ul class="nav-list">
+          <li>
+            <a class="flex-row">
+              <div class="flex-row">
+                <img src="assets/icons/home 4.png" alt="" />
+                <p>Home</p>
+              </div>
+              <img class="arrow" src="assets/icons/Vector.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a class="flex-row">
+              <div class="flex-row">
+                <img src="assets/icons/user-circle 1.png" alt="" />
+                <p>Merchant Profile</p>
+              </div>
+              <img class="arrow" src="assets/icons/Vector.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a class="flex-row">
+              <div class="flex-row">
+                <img src="assets/icons/users-group 1.png" alt="" />
+                <p>Merchant Users</p>
+              </div>
+              <img class="arrow" src="assets/icons/Vector.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a class="flex-row">
+              <div class="flex-row">
+                <img src="assets/icons/Vector3.png" alt="" />
+                <p>Product Management</p>
+              </div>
+              <img class="arrow" src="assets/icons/Vector.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a class="flex-row">
+              <div class="flex-row">
+                <img src="assets/icons/coins 1.svg" alt="" />
+                <p>Points Management</p>
+              </div>
+              <img class="arrow" src="assets/icons/Vector.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a class="flex-row active">
+              <div class="flex-row">
+                <img src="assets/icons/report 2.svg" alt="" />
+                <p>Reports</p>
+              </div>
+              <img class="arrow" src="assets/icons/Vector.svg" alt="" />
+            </a>
+            <ul class="sub-menu">
+              <li><a>Transactions Report</a></li>
+              <li><a>Billing Report</a></li>
+              <li><a class="active">Points Report</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ---End side bar menu --- -->
+      <!-- ---- ---start dashboard header&content--- -->
+      <div class="main-container dashboard">
+        <!-- Start header  -->
+        <header class="header">
+          <div></div>
+          <div class="user-nav">
+            <div class="user-name flex-row">
+              <img
+                class="user-img"
+                src="assets/images/Ellipse 10.png"
+                alt="user image"
+              />
+              <h4>Nadine Hafez</h4>
+              <img src="assets/icons/Shape.svg" alt="" />
+            </div>
+            <div class="notification">
+              <img src="assets/icons/bell.svg" alt="" />
+            </div>
+            <img src="assets/icons/Line 57.svg" alt="" />
+            <div class="language flex-row">
+              <img src="assets/icons/world.svg" alt="" />
+              <p>English</p>
+              <img src="assets/icons/Shape.svg" alt="" />
+            </div>
+          </div>
+        </header>
+        <!-- End header  -->
+        <!-- Start dashboard content -->
+        <div class="dashboard-content">
+          <div class="user-path">
+            <span class="inactive">Home</span> <span> > </span>
+            <span class="inactive">Points Report</span> <span> > </span>
+            <span class="active">Result</span>
+          </div>
+          <div class="flex-row space-between">
+            <h3 class="head-title">Result</h3>
+            <!-- export options  -->
+            <div class="export-options">
+              <label>Export as</label>
+              <img class="green-outline" src="assets/icons/csv.svg" alt="" />
+              <img class="red-outline" src="assets/icons/pdf.svg" alt="" />
+              <!-- export notification box - remove "hide" to show it -->
+              <div class="notification-box hide">
+                <img src="assets/icons/export3.svg" alt="" />
+                <div>
+                  <h4>Exporting Points Report</h4>
+                  <p>Your PDF is being exported. This may take a moment</p>
+                </div>
+                <img src="assets/icons/x-black.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="content-container result">
+            <div class="card">
+              <h5 class="title">Transactions Report</h5>
+              <div class="flex-row w-100">
+                <div class="flex-row space-between w-100">
+                  <h5>Start Date:</h5>
+                  <p>Dec 2023</p>
+                </div>
+                <img
+                  class="line"
+                  src="assets/icons/line-light-gray.svg"
+                  alt=""
+                />
+                <div class="flex-row space-between w-100">
+                  <h5>End Date:</h5>
+                  <p>Jan 2024</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-head">
+                <h3>Points Summary</h3>
+              </div>
+              <div class="summary-content">
+                <div class="chart w-100">
+                  <img src="assets/images/point-chart.png" alt="" />
+                </div>
+                <div class="statistics">
+                  <div>
+                    <h6 class="awarded">Awarded</h6>
+                    <h3>200000</h3>
+                  </div>
+                  <div>
+                    <h6 class="redeemed">Redeemed</h6>
+                    <h3>500000</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-head">
+                <h3>Sites</h3>
+              </div>
+              <!-- sites table  -->
+              <div class="sites-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Site</th>
+                      <th>Points Issued</th>
+                      <th>Points Redeemed</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Jarir - 1</td>
+                      <td>45000</td>
+                      <td>-</td>
+                      <td>
+                        <div class="status-inactive">Inactive</div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Jarir - 2</td>
+                      <td>-</td>
+                      <td>70000</td>
+                      <td>
+                        <div class="status-active">Active</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Jarir - 3</td>
+                      <td>45000</td>
+                      <td>-</td>
+                      <td>
+                        <div class="status-inactive">Inactive</div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Jarir - 4</td>
+                      <td>-</td>
+                      <td>70000</td>
+                      <td>
+                        <div class="status-active">Active</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Jarir - 5</td>
+                      <td>45000</td>
+                      <td>-</td>
+                      <td>
+                        <div class="status-inactive">Inactive</div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Jarir - 6</td>
+                      <td>-</td>
+                      <td>70000</td>
+                      <td>
+                        <div class="status-active">Active</div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Jarir - 7</td>
+                      <td>-</td>
+                      <td>70000</td>
+                      <td>
+                        <div class="status-active">Active</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <h3>Sites</h3>
+              </div>
+              <!-- products table  -->
+              <div class="products-result-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Site</th>
+                      <th>Type</th>
+                      <th>Site</th>
+                      <th>Points Issued</th>
+                      <th>Points Redeemed</th>
+                      <th>Statut</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Product A</td>
+                      <td>
+                        <div class="redemption">Redemption</div>
+                      </td>
+                      <td>Jarir - 1</td>
+                      <td>45000</td>
+                      <td>-</td>
+                      <td>
+                        <div class="status-inactive">Inactive</div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Product B</td>
+                      <td>
+                        <div class="earning">Earning</div>
+                      </td>
+                      <td>Jarir - 2</td>
+                      <td>-</td>
+                      <td>70000</td>
+                      <td>
+                        <div class="status-active">Active</div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Product C</td>
+                      <td>
+                        <div class="redemption">Redemption</div>
+                      </td>
+                      <td>Jarir - 3</td>
+                      <td>45000</td>
+                      <td>-</td>
+                      <td>
+                        <div class="status-inactive">Inactive</div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Product D</td>
+                      <td>
+                        <div class="earning">Earning</div>
+                      </td>
+                      <td>Jarir - 4</td>
+                      <td>-</td>
+                      <td>70000</td>
+                      <td>
+                        <div class="status-active">Active</div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Product E</td>
+                      <td>
+                        <div class="redemption">Redemption</div>
+                      </td>
+                      <td>Jarir - 5</td>
+                      <td>45000</td>
+                      <td>-</td>
+                      <td>
+                        <div class="status-inactive">Inactive</div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Product F</td>
+                      <td>
+                        <div class="earning">Earning</div>
+                      </td>
+                      <td>Jarir - 6</td>
+                      <td>-</td>
+                      <td>70000</td>
+                      <td>
+                        <div class="status-active">Active</div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Product G</td>
+                      <td>
+                        <div class="earning">Earning</div>
+                      </td>
+                      <td>Jarir - 7</td>
+                      <td>-</td>
+                      <td>70000</td>
+                      <td>
+                        <div class="status-active">Active</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- overlay bg  -->
+        <!-- <div class="overlay"></div> -->
+        <!-- End dashboard content -->
+      </div>
+      <!-- -------------- ---End  dashboard --- -->
+    </div>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
