@@ -791,17 +791,24 @@ table td {
 .dashboard-content .content-container {
   padding: 40px 0px 60px;
 }
+.content-container .form {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  /* justify-content: flex-start; */
+  max-width: 700px;
+}
 .input-feild {
   display: flex;
   flex-direction: column;
   justify-content: left;
   gap: 4px;
-  width: 347px;
+  max-width: 347px;
 }
 .input-feild label {
   color: var(--Neutrals-N2, #404042);
   font-size: 16px;
   font-weight: 400;
+  width: 100%;
 }
 .input-feild .input {
   display: flex;
@@ -812,6 +819,7 @@ table td {
   border: 1px solid #a3a3a8;
   background: #fff;
   padding: 12px 16px;
+  width: 100%;
 }
 .input input {
   border: none;
@@ -857,11 +865,7 @@ table td {
   flex-direction: column;
   justify-content: space-between;
 }
-.content-container .form {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  justify-content: flex-start;
-}
+
 .content-container.points .btn {
   width: 257px;
 }
@@ -1100,4 +1104,14 @@ table td {
     width: 350px;
     padding: 10px;
   }
+}
+
+/* mobile size  */
+@media screen and (max-width: 768px) {
+  /* .dashboard-container {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-container .sidebar-container {
+    display: none;
+  } */
 }

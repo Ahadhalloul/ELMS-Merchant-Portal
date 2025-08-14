@@ -46,3 +46,21 @@ function collapseSidebar() {
 function showOptions() {
   document.querySelector(".options-list").classList.toggle("hide");
 }
+
+// Define the breakpoint for small screens
+const smallScreenBreakpoint = 1024; // Adjust as needed
+
+// add/remove collapsed class based on screen size
+function handleScreenSize() {
+  if (window.innerWidth <= smallScreenBreakpoint) {
+    sidebar.classList.add("collapsed");
+  } else {
+    sidebar.classList.remove("collapsed"); // Remove if screen is larger
+  }
+}
+
+// Initial call to set the class on page load
+handleScreenSize();
+
+// Add an event listener to update the class on window resize
+window.addEventListener("resize", handleScreenSize);
