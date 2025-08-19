@@ -467,6 +467,13 @@ body {
 .dashboard-container .sidebar-container.collapsed .nav-list .sub-menu {
   display: none;
 }
+.dashboard-container .sidebar-container.collapsed .nav-list a img {
+  margin-right: 0px;
+}
+.dashboard-container .sidebar-container.collapsed .nav-list a {
+  justify-content: center;
+}
+
 /* ----------------------end sidebar -----------------*/
 /* -------------------------------------------------------  */
 /*------------------- start header -----------------*/
