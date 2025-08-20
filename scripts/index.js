@@ -47,6 +47,7 @@ function showOptions() {
   document.querySelector(".options-list").classList.toggle("hide");
 }
 
+////////////////////
 // Define the breakpoint for small screens
 const smallScreenBreakpoint = 1024; // Adjust as needed
 
@@ -58,9 +59,16 @@ function handleScreenSize() {
     sidebar.classList.remove("collapsed"); // Remove if screen is larger
   }
 }
-
 // Initial call to set the class on page load
 handleScreenSize();
-
 // Add an event listener to update the class on window resize
 window.addEventListener("resize", handleScreenSize);
+
+///////////////////////////////
+// show/hide MOBILE screen menu
+function openSmallMenu() {
+  document.querySelector(".small-sidebar").style.display = "block";
+}
+function closeSmallMenu() {
+  document.querySelector(".small-sidebar").style.display = "none";
+}
