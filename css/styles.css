@@ -1209,33 +1209,45 @@ table td {
     display: block;
     cursor: pointer;
     padding: 12px 20px;
-    width: 100%;
-    /* margin: 0px 10px;
-    border-radius: 7px; */
+    margin: 0px 10px;
+    border-radius: 7px;
     margin-top: 5px;
     display: flex;
     justify-content: space-between;
   }
-  .small-sidebar ul li:hover > a,
-  .small-sidebar ul li.active > a {
+  .small-sidebar ul li > a:hover,
+  .small-sidebar ul li > a.active {
     background-color: #fff;
     color: var(--ejada-main-color);
   }
-  .small-sidebar ul li:hover > a img,
-  .small-sidebar ul li.active > a img {
+  .small-sidebar ul li > a:hover img,
+  .small-sidebar ul li > a.active img {
     filter: brightness(0) saturate(100%) invert(9%) sepia(44%) saturate(7468%)
       hue-rotate(232deg) brightness(102%) contrast(118%);
   }
-  .small-sidebar ul li.active > a img {
+  .small-sidebar ul li > a.active img {
     transform: rotate(90deg);
   }
   .small-sidebar ul.sub-menu li a {
     padding-left: 40px;
   }
-  .small-sidebar ul.sub-menu li:hover > a,
-  .small-sidebar ul.sub-menu li.active > a {
+  .small-sidebar ul.sub-menu li > a:hover,
+  .small-sidebar ul.sub-menu li > a.active {
     background-color: #000c5e;
     color: #fff;
+  }
+  .small-sidebar ul.small-menu-list > li > a {
+    position: relative;
+  }
+  .small-sidebar ul.small-menu-list > li > a.active::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 100%;
+    background-color: var(--white);
+    left: -20px;
+    top: 0;
+    border-radius: 7px;
   }
   .close-small-menu {
     width: 30px;
