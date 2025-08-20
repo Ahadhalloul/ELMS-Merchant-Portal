@@ -1123,6 +1123,10 @@ table td {
 .small-sidebar {
   display: none;
 }
+.overlay.sidebar {
+  z-index: -1;
+  display: none;
+}
 
 @media screen and (max-width: 1024px) {
   .dashboard-container {
@@ -1134,6 +1138,12 @@ table td {
   }
   .main-container.dashboard {
     margin-left: 90px;
+  }
+  .sidebar-container.collapsed .overlay.sidebar {
+    display: none;
+  }
+  .sidebar-container .overlay.sidebar {
+    display: block;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1190,6 +1200,7 @@ table td {
     flex-direction: column;
     gap: 8px;
     margin-top: 20px;
+    margin-bottom: 60px;
   }
   .small-sidebar ul li {
     list-style: none;
@@ -1240,5 +1251,8 @@ table td {
   .line.small-screen {
     width: 90%;
     margin-left: 12px;
+  }
+  .small-sidebar .overlay.sidebar {
+    display: block;
   }
 }
