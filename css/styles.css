@@ -1177,6 +1177,8 @@ table td {
     width: 30px;
     z-index: 2;
     text-align: center;
+    filter: brightness(0) saturate(100%) invert(15%) sepia(42%) saturate(6071%)
+      hue-rotate(230deg) brightness(69%) contrast(124%);
   }
   .logo.small-screen {
     display: block;
