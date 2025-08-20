@@ -425,8 +425,7 @@ body {
   filter: brightness(0) saturate(100%) invert(9%) sepia(44%) saturate(7468%)
     hue-rotate(232deg) brightness(102%) contrast(118%);
 }
-.dashboard-container .sidebar-container .nav-list > li > a.active::before,
-.dashboard-container .sidebar-container .nav-list > li > a:hover::before {
+.dashboard-container .sidebar-container .nav-list > li > a.active::before {
   content: "";
   position: absolute;
   width: 20px;
@@ -1244,8 +1243,7 @@ table td {
   .small-sidebar ul.small-menu-list > li > a {
     position: relative;
   }
-  .small-sidebar ul.small-menu-list > li > a.active::before,
-  .small-sidebar ul.small-menu-list > li > a:hover::before {
+  .small-sidebar ul.small-menu-list > li > a.active::before {
     content: "";
     position: absolute;
     width: 15px;
