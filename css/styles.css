@@ -407,7 +407,8 @@ body {
 }
 
 /* for sidebar active nav style  */
-.dashboard-container .sidebar-container .active {
+.dashboard-container .sidebar-container .active,
+.dashboard-container .sidebar-container .nav-list > li > a:hover {
   background-color: var(--white);
   border-radius: 7px;
   position: relative;
@@ -415,14 +416,17 @@ body {
 .dashboard-container .sidebar-container .active .arrow {
   transform: rotate(90deg);
 }
-.dashboard-container .sidebar-container .active p {
+.dashboard-container .sidebar-container .active p,
+.dashboard-container .sidebar-container .nav-list > li > a:hover p {
   color: var(--ejada-main-color);
 }
-.dashboard-container .sidebar-container .active img {
+.dashboard-container .sidebar-container .active img,
+.dashboard-container .sidebar-container .nav-list > li > a:hover img {
   filter: brightness(0) saturate(100%) invert(9%) sepia(44%) saturate(7468%)
     hue-rotate(232deg) brightness(102%) contrast(118%);
 }
-.dashboard-container .sidebar-container .nav-list li a.active::before {
+.dashboard-container .sidebar-container .nav-list > li > a.active::before,
+.dashboard-container .sidebar-container .nav-list > li > a:hover::before {
   content: "";
   position: absolute;
   width: 20px;
@@ -431,7 +435,8 @@ body {
   left: -40px;
   border-radius: 7px;
 }
-.dashboard-container .sidebar-container .nav-list .sub-menu li a.active {
+.dashboard-container .sidebar-container .nav-list .sub-menu li a.active,
+.dashboard-container .sidebar-container .nav-list .sub-menu li a:hover {
   background-color: #000c5e;
 }
 .dashboard-container
@@ -1209,7 +1214,7 @@ table td {
     display: block;
     cursor: pointer;
     padding: 12px 20px;
-    margin: 0px 10px;
+    margin: 0px 10px 0px 15px;
     border-radius: 7px;
     margin-top: 5px;
     display: flex;
@@ -1239,13 +1244,14 @@ table td {
   .small-sidebar ul.small-menu-list > li > a {
     position: relative;
   }
-  .small-sidebar ul.small-menu-list > li > a.active::before {
+  .small-sidebar ul.small-menu-list > li > a.active::before,
+  .small-sidebar ul.small-menu-list > li > a:hover::before {
     content: "";
     position: absolute;
     width: 15px;
     height: 100%;
     background-color: var(--white);
-    left: -20px;
+    left: -25px;
     top: 0;
     border-radius: 7px;
   }
